@@ -10,7 +10,8 @@ class QCDWeightProducer(JetLepMetSyst):
     def __init__(self, *args, **kwargs):
         default_name = "qcd_weight"
 
-        default_json_path = os.path.expandvars("$CMSSW_BASE/src/L1DS/Modules/data/qcd_with_weights.json")
+        #default_json_path = os.path.expandvars("$CMSSW_BASE/src/L1DS/Modules/data/qcd_with_weights.json")
+        default_json_path = os.path.expandvars("$CMSSW_BASE/src/L1DS/Modules/data/qcd_with_weights_2025.json")
 
         self.json_path = kwargs.pop("json_path", default_json_path)
         self.json = self.json_path.replace("/", "_").replace(".", "_")
